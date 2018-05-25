@@ -5,12 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'github-trending'
 
-repos = Github::Trending.get
-repos.each do |r|
-  puts "#{r.name} (#{r.star_count} stargazers)"
- puts "--- #{r.description}\n\n"
-  # ListItem.create(url: r.name, name:r.description, website:"GitHub")
+require 'open-uri'
 
+
+
+
+url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=#{ENV['NewsAPIKey']}"
+
+
+req = open(url)
+response_body = req.read
+resp = JSON.parse(response_body)
+resp["articles"].each do |f|
+  ListItem.create(title: f["title"], url: f["url"], website:f["source"]["name"])
 end
