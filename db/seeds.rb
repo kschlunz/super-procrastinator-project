@@ -12,9 +12,16 @@ require 'open-uri'
 
 
 url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=#{ENV['NewsAPIKey']}"
-
+url2 = "https://newsapi.org/v2/top-headlines?country=gb&apiKey=#{ENV['NewsAPIKey']}"
 
 req = open(url)
+response_body = req.read
+resp = JSON.parse(response_body)
+resp["articles"].each do |f|
+  ListItem.create(title: f["title"], url: f["url"], website:f["source"]["name"])
+end
+
+req = open(url2)
 response_body = req.read
 resp = JSON.parse(response_body)
 resp["articles"].each do |f|
