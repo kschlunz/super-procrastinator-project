@@ -21,7 +21,7 @@ class Api::V1::ListsController < ActionController::API
   def destroy
     listId = @list.id
     @list.destroy
-    render json: {message:"Zap! lis deleted", listId:listId}
+    render json: {message:"Zap! list deleted", listId:listId}
   end
 
   def show
