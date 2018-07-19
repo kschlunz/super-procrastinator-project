@@ -1,24 +1,25 @@
-# README
+## Super Procrastinator Newsfeed
+A customizable Newsfeed that shows a few stories from different news sources for today's news.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+## Demo
+https://youtu.be/pBEcKJnKaaM
 
-* Configuration
+## Tech/framework used
+Ruby on Rails, Postgres Database
 
-* Database creation
 
-* Database initialization
+## Features
+The ability to customize a newsfeed and have updated news stories everyday. Used API:  "https://newsapi.org/v2/top-headlines?country=us&apiKey=#{ENV['NewsAPIKey']}"
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Installation
+Clone down a copy, Run Bundle Install, Run Rails S in your terminal.
 
-* Deployment instructions
 
-* ...
+## License
+
+
+© [Kate Schlunz]()
