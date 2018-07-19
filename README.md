@@ -18,8 +18,9 @@ The ability to customize a newsfeed and have updated news stories everyday. Used
 ## Installation
 Clone down a copy, Run Bundle Install, Run Rails S in your terminal.
 
+## Contributors
+  Helen Liutongco - https://github.com/hliutongco
+  Kate Schlunz - https://github.com/kschlunz
 
 ## License
-
-
-© [Kate Schlunz]()
+© [Kate Schlunz, Helen Liutongco]()
